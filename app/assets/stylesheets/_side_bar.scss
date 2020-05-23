@@ -1,0 +1,54 @@
+@import "config/variables";
+@import "mixin/centering";
+
+.side-bar {
+  background-color: #253141;
+  height: 100vh;
+  width: 300px;
+  &__user-name{
+    height: 100px;
+    @include centering();
+    margin: 0 20px;
+    .top-items {
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      &__name {
+        color: $fontWhiteColor;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__icons {
+        display: flex;
+        list-style: none;
+        a {
+          color: $fontWhiteColor;
+        }
+        &--edit-user {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__group-list {
+    background-color: #2f3e51;
+    height: calc( 100vh - 100px);
+    padding: 20px;
+    overflow-y: scroll;
+    .group {
+      color: $fontWhiteColor;
+      text-decoration: none;
+      &__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__first-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
+  } 
+}
+

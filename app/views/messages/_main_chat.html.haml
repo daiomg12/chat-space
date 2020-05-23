@@ -1,0 +1,99 @@
+.main-chat
+  .main-chat__group-info
+    .left-box
+      .left-box__group-name
+        Group-name
+        %ul.members
+          Member :
+          %li.first-user
+            ABC
+          %li.second-user
+            OPQ
+          %li.third-user
+            STU
+    .edit-box
+      = link_to "#", class: "edit" do
+        .edit-btn
+          Edit
+  .main-chat__messages
+    .message-box
+      .message-box__sender
+        .message-box-sender__name 
+          Dai
+        .message-box__sender__date 
+          2020/05/22(Fri) 02:50:00
+      .message-box__content
+        やっと、ここまで来ました汗
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+    .message-box
+      .message-box__sender
+        .message-box-sender__name
+          Iad
+        .message-box__sender__date
+          2020/05/23(Sat) 02:50:00
+      .message-box__content
+        今日も勉強ですかね
+  .main-chat__message-form
+    .form
+      %form.post
+        .comment-box
+          %input{type: "text", class: "comment-box__text", placeholder: "type a message"}
+          %label{class: "comment-box__img"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "comment-box__img__file"}
+        %input{type: "submit", class: "send-btn", value: "Send"}
