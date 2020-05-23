@@ -2,14 +2,14 @@
   .side-bar__user-name
     .top-items
       .top-items__name
-        dai
+        = current_user.name
       %ul.top-items__icons
         %li
           = link_to "#", class: "top-items__icons--new-group" do
             %i.fa.fa-edit
             %span<>
         %li
-          = link_to "#", class: "top-items__icons--edit-user" do
+          = link_to edit_user_path(current_user), class: "top-items__icons--edit-user" do
             %i.fa.fa-cog
             %span<>
   .side-bar__group-list
