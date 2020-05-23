@@ -1,11 +1,13 @@
+@import "config/variables";
+@import "mixin/centering";
+
 .side-bar {
   background-color: #253141;
   height: 100vh;
   width: 300px;
   &__user-name{
     height: 100px;
-    display: flex;
-    align-items: center;
+    @include centering();
     margin: 0 20px;
     .top-items {
       height: 20px;
@@ -14,7 +16,7 @@
       justify-content: space-between;
       line-height: 20px;
       &__name {
-        color: white;
+        color: $fontWhiteColor;
         font-size: 16px;
         font-weight: bold;
       }
@@ -22,7 +24,7 @@
         display: flex;
         list-style: none;
         a {
-          color: white;
+          color: $fontWhiteColor;
         }
         &--edit-user {
           margin-left: 5px;
@@ -36,7 +38,7 @@
     padding: 20px;
     overflow-y: scroll;
     .group {
-      color: white;
+      color: $fontWhiteColor;
       text-decoration: none;
       &__group-name{
         font-size: 15px;

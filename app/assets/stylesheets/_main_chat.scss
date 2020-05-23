@@ -1,13 +1,15 @@
+@import "config/variables";
+@import "mixin/centering";
+
 .main-chat {
-  background-color: #ffffff; 
+  background-color: $mainWhiteColor; 
   height: 100vh;
   width: calc( 100vw - 300px);
   &__group-info {
-    background-color: #ffffff;
+    background-color: $mainWhiteColor;
     height: 100px;
-    display: flex;
+    @include centering();
     justify-content: space-between;
-    align-items: center;
     padding: 0 40px;
     .left-box{
       &__group-name {
@@ -28,7 +30,7 @@
     }
     .edit {
       text-decoration: none;
-      color: #38aef0;
+      color: $edt-boxBlueColor;
       font-size: 16px;
     }
     .edit-box {
@@ -38,7 +40,7 @@
       margin: 28px 0;
       line-height: 40px;
       text-align: center;
-      border: 1px #38aef0 solid;
+      border: 1px $edt-boxBlueColor solid;
     }
   }
   &__messages {
@@ -74,8 +76,7 @@
     background-color: #d2d2d2;
     padding: 20px 40px;
     .post {
-      display: flex;
-      align-items: center;
+      @include centering();
       .comment-box{
         display: flex;
         width: 100%;
@@ -98,8 +99,8 @@
       .send-btn {
         height: 40px;
         width: 100px;
-        background-color: #38aef0;
-        color: white;
+        background-color: $edt-boxBlueColor;
+        color: $fontWhiteColor;
         margin-left: 15px;
         cursor: pointer;
       }
