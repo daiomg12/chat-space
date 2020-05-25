@@ -14,8 +14,9 @@
             %span<>
   .side-bar__group-list
     - current_user.groups.each do |group|
-      = link_to "#", class: "group" do
-        .group__group-name
-          =group.name
-        .group__first-message
-          まだメッセージがありません
+      .group
+        = link_to group_messages_path(group) do
+          .group__group-name
+            =group.name
+          .group__first-message
+            = group.show_last_message
