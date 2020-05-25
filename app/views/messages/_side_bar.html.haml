@@ -5,7 +5,7 @@
         = current_user.name
       %ul.top-items__icons
         %li
-          = link_to "#", class: "top-items__icons--new-group" do
+          = link_to new_group_path, class: "top-items__icons--new-group" do
             %i.fa.fa-edit
             %span<>
         %li
@@ -13,43 +13,9 @@
             %i.fa.fa-cog
             %span<>
   .side-bar__group-list
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        まだメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        それでもなおメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        まだメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        それでもなおメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        まだメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        それでもなおメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        まだメッセージがありません
-    = link_to "#", class: "group" do
-      .group__group-name
-        techcamp
-      .group__first-message
-        それでもなおメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to "#", class: "group" do
+        .group__group-name
+          =group.name
+        .group__first-message
+          まだメッセージがありません
