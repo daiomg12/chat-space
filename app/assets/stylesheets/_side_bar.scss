@@ -38,15 +38,20 @@
     padding: 20px;
     overflow-y: scroll;
     .group {
-      color: $fontWhiteColor;
-      text-decoration: none;
+      a {
+        text-decoration: none;
+      }
       &__group-name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: $fontWhiteColor;
+        text-decoration: none;
       }
       &__first-message {
         font-size: 11px;
         margin-bottom: 40px;
+        color: $fontWhiteColor;
+        // text-decoration: none;
       }
     }
   } 
