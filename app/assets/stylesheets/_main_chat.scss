@@ -78,7 +78,6 @@
     .new_message {
       @include centering();
       .comment-box{
-        display: flex;
         width: 100%;
         position: relative;
         &__text {
@@ -91,17 +90,19 @@
           position: absolute;
           top: 10px;
           right: 10px;
+          font-size: 1.3rem;
           &__file {
             display: none;
           }
         }
       }
       .send-btn {
-        height: 40px;
+        height: 50px;
         width: 100px;
         background-color: $edt-boxBlueColor;
         color: $fontWhiteColor;
         margin-left: 15px;
+        padding: 0 30px;
         cursor: pointer;
       }
     }
